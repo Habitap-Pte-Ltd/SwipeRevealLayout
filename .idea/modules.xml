@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SwipeRevealLayout.iml" filepath="$PROJECT_DIR$/.idea/SwipeRevealLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/swipe-reveal-layout/swipe-reveal-layout.iml" filepath="$PROJECT_DIR$/swipe-reveal-layout/swipe-reveal-layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo/SwipeRevealLayout.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo/SwipeRevealLayout.demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swipe-reveal-layout/SwipeRevealLayout.swipe-reveal-layout.iml" filepath="$PROJECT_DIR$/.idea/modules/swipe-reveal-layout/SwipeRevealLayout.swipe-reveal-layout.iml" />
     </modules>
   </component>
 </project>
