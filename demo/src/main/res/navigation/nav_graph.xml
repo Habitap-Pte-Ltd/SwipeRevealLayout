@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/swipeRevealLayoutDemoFragment">
+
+    <fragment
+        android:id="@+id/swipeRevealLayoutDemoFragment"
+        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.SwipeRevealLayoutDemoFragment"
+        android:label="SwipeRevealLayout Demo"
+        tools:layout="@layout/fragment_swipe_reveal_layout_demo">
+
+        <action
+            android:id="@+id/action_swipeRevealLayoutDemoFragment_to_recyclerDemoFragment"
+            app:destination="@id/recyclerDemoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/swipeRevealLayoutDemoFragment" />
+
+        <action
+            android:id="@+id/action_swipeRevealLayoutDemoFragment_to_gridDemoFragment"
+            app:destination="@id/gridDemoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/swipeRevealLayoutDemoFragment" />
+
+        <action
+            android:id="@+id/action_swipeRevealLayoutDemoFragment_to_listDemoFragment"
+            app:destination="@id/listDemoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/swipeRevealLayoutDemoFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recyclerDemoFragment"
+        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.RecyclerDemoFragment"
+        android:label="RecyclerView Demo"
+        tools:layout="@layout/fragment_recycler_demo" />
+
+    <fragment
+        android:id="@+id/gridDemoFragment"
+        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.GridDemoFragment"
+        android:label="GridView Demo"
+        tools:layout="@layout/fragment_grid_demo" />
+
+    <fragment
+        android:id="@+id/listDemoFragment"
+        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.ListDemoFragment"
+        android:label="ListView Demo"
+        tools:layout="@layout/fragment_list_demo" />
+
+</navigation>

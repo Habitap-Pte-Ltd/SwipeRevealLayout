@@ -1,17 +1,22 @@
 ## SwipeRevealLayout
 A layout that you can swipe/slide to show another layout.
 
+###### Note:
+This is a port from the original [SwipeRevealLayout](https://github.com/chthai64/SwipeRevealLayout) by
+[chthai64](https://github.com/chthai64).  It has been rewritten in Kotlin, migrated to use the latest Android libraries
+and has some minor fixes related to padding issues.
+
 ### Demo
 ##### Overview
-![Demo all](https://raw.githubusercontent.com/chthai64/SwipeRevealLayout/master/art/demo_all.gif)
+![Demo all](./art/demo_all.gif)
 
 ##### Drag mode
 
 Drag mode normal:   
-![Demo normal](https://raw.githubusercontent.com/chthai64/SwipeRevealLayout/master/art/demo_normal.gif)
+![Demo normal](./art/demo_normal.gif)
 
 Drag mode same_level:   
-![Demo same](https://raw.githubusercontent.com/chthai64/SwipeRevealLayout/master/art/demo_same.gif)
+![Demo same](./art/demo_same.gif)
 
 ### Features
 * Flexible, easy to use with RecyclerView, ListView or any view that requires view binding.
@@ -141,11 +146,34 @@ public class YourActivity extends Activity {
 
 ```viewBinderHelper.closeLayout(String id)```: Close a layout. ```id``` is the id of the data object which is bind to the layout.
 
+#### Build Issues
+You may encounter this error while building your app:
+```
+2 files found with path 'META-INF/INDEX.LIST'.
+Adding a packagingOptions block may help, please refer to
+https://developer.android.com/reference/tools/gradle-api/8.0/com/android/build/api/dsl/ResourcesPackagingOptions
+for more information
+```
+
+If this happens, you will need to either exclude `META-INF/INDEX.LIST` or pick the first occurrence.  To do so, you can add the following in your app module's `build.gradle`:
+```gradle
+android {
+    packagingOptions {
+        resources {
+            pickFirsts += ["META-INF/INDEX.LIST"]
+        }
+    }
+
+    ...
+}
+```
+
+
 ### License
 ```
  The MIT License (MIT)
 
- Copyright (c) 2016 Chau Thai
+ Copyright (c) 2022 Rex Mag-uyon Torres
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal

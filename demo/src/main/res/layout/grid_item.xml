@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.chauthai.swipereveallayout.SwipeRevealLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/swipe_layout"
     android:layout_width="150dp"
-    android:layout_height="150dp"
-    android:padding="10dp"
+    android:layout_height="100dp"
+    android:padding="4dp"
     app:dragEdge="right"
     app:mode="same_level">
 
@@ -18,8 +17,10 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_delete"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            app:tint="@color/white" />
+
     </FrameLayout>
 
     <FrameLayout
@@ -32,10 +33,11 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:textColor="@android:color/white"/>
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
     </FrameLayout>
-</com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+</io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout>

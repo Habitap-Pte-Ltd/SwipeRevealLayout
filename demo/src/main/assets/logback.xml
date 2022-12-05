@@ -1,0 +1,16 @@
+<configuration>
+    <!-- log to normal LogCat -->
+    <appender name="LOGCAT" class="io.github.rexmtorres.android.swipereveallayout.demo.log.LogcatAppender">
+        <tagEncoder>
+            <pattern>[SRLD] %logger{0}</pattern>
+        </tagEncoder>
+        <encoder>
+            <pattern>%line: %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Write DEBUG (and higher-level) messages to the log -->
+    <root level="DEBUG">
+        <appender-ref ref="LOGCAT" />
+    </root>
+</configuration>
