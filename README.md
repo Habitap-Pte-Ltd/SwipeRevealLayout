@@ -25,19 +25,19 @@ Drag mode same_level:
   * Normal (the secondary view is underneath the main view).
   * Same level (the secondary view sticks to the edge of the main view).
 * Able to open one row at a time.
-* Minimum api level 9.
+* Minimum api level 23 (Android Marshmallow).
 
 ### Usage
 #### Dependencies
 ```groovy
 dependencies {
-    compile 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+    compile 'io.github.rexmtorres.android.swipereveallayout:swipereveallayout:0.0.1'
 }
 ```
 
 #### Layout file
 ```xml
-<com.chauthai.swipereveallayout.SwipeRevealLayout
+<io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:mode="same_level"
@@ -53,7 +53,7 @@ dependencies {
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
             
-</com.chauthai.swipereveallayout.SwipeRevealLayout>
+</io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout>
 ```
 ```app:mode``` can be ```normal``` or ```same_level```
 
