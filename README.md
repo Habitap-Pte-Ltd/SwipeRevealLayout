@@ -31,7 +31,7 @@ Drag mode same_level:
 #### Dependencies
 ```groovy
 dependencies {
-    compile 'io.github.rexmtorres.android:swipereveallayout:0.0.1'
+    implementation "io.github.rexmtorres.android:swipereveallayout:0.0.1"
 }
 ```
 
