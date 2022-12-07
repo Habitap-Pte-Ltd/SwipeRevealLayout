@@ -1,4 +1,9 @@
-## SwipeRevealLayout
+SwipeRevealLayout
+============
+
+[![Maven Central](https://img.shields.io/maven-central/v/app.habitap/swipereveallayout.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22app.habitap%22%20AND%20a:%22swipereveallayout%22)
+
+### About
 A layout that you can swipe/slide to show another layout.
 
 ###### Note:
