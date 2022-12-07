@@ -29,10 +29,10 @@ repository (e.g. Github)***.  You must use the same key for your subsequent publ
    sub   rsa4096 2022-12-07 [E]
    ```
 
-2. Export and backup your secret key somewhere safe.  Specify the `--armour` option so that it can be used as an environment variable if needed:
+2. Export and backup your secret key somewhere safe:
 
    ```shell
-   > gpg --armour --export-secret-keys 5C73BFC8 > C:\Users\rexmt\habitap_sonatype_build.gpg
+   > gpg --export-secret-keys 5C73BFC8 > C:\Users\rexmt\habitap_sonatype_build.gpg
    ```
 
 3. Upload your public key to a public server so that sonatype can find it:
@@ -59,7 +59,7 @@ Follow the steps indicated here: https://vanniktech.github.io/gradle-maven-publi
    
    <img src="https://central.sonatype.org/images/ossrh-build-promotion-menu.png">
 
-4. Select your repository and click `Close`.
+4. Select your repository and click `Close` if it is not yet closed.
    
    <img src="https://central.sonatype.org/images/ossrh-staging-repo-close.png">
 

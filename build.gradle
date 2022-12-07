@@ -4,24 +4,3 @@ plugins {
     id "com.android.library" version "$androidPluginVersion" apply false
     id "org.jetbrains.kotlin.android" version "$kotlinVersion" apply false
 }
-
-// TODO Warning: DO NOT UPLOAD YOUR SECRETS TO A PUBLIC REPOSITORY (e.g. Github)!!!
-// Here, we store our secrets in a file habitap_gradle.properties in the user's home directory.
-// If this file exists, we will load it into this project.  This file contains the following
-// properties that are used by the Maven publishing plugin:
-// - signing.keyId
-// - signing.password
-// - signing.secretKeyRingFile
-// - mavenCentralUsername
-// - mavenCentralPassword
-def habitapGradleProps = new File(System.properties["user.home"], "habitap_gradle.properties")
-
-allprojects {
-    if (habitapGradleProps.exists()) {
-        def habitapProps = new Properties()
-        habitapProps.load(new FileInputStream(habitapGradleProps))
-        habitapProps.each { prop ->
-            project.ext.set(prop.key, prop.value)
-        }
-    }
-}
