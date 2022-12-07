@@ -5,15 +5,13 @@ pluginManagement {
         gradlePluginPortal()
     }
 
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.id == "org.jetbrains.dokka") {
-                useModule "org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion"
-            } else if (requested.id.id == "com.vanniktech.maven.publish") {
-                useModule "com.vanniktech:gradle-maven-publish-plugin:$gradleMavenPublishVersion"
-            }
-        }
-    }
+//    resolutionStrategy {
+//        eachPlugin {
+//            if (requested.id.id == "org.jetbrains.dokka") {
+//                useModule "org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion"
+//            }
+//        }
+//    }
 }
 
 dependencyResolutionManagement {
