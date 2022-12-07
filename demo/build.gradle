@@ -6,11 +6,11 @@ plugins {
 apply from: "../versions.gradle"
 
 android {
-    namespace "io.github.rexmtorres.android.swipereveallayout.demo"
+    namespace "app.habitap.swipereveallayout.demo"
     compileSdk 33
 
     defaultConfig {
-        applicationId "io.github.rexmtorres.android.swipereveallayout.demo"
+        applicationId "app.habitap.swipereveallayout.demo"
         minSdk 23
         targetSdk 33
         versionCode 1

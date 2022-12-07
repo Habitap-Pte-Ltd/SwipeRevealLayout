@@ -8,7 +8,7 @@ plugins {
 apply from: "../versions.gradle"
 
 android {
-    namespace "io.github.rexmtorres.android.swipereveallayout"
+    namespace "app.habitap.swipereveallayout"
     compileSdk 33
 
     defaultConfig {

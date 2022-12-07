@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package io.github.rexmtorres.android.swipereveallayout.demo.log
+package app.habitap.swipereveallayout.demo.log
 
 import android.content.Context
 import android.util.Log
@@ -53,7 +53,7 @@ import java.io.IOException
  * [Application's][android.app.Application] `onCreate()` method, like so:
  * ```kotlin
  * import android.app.Application
- * import io.github.rexmtorres.android.swipereveallayout.demo.log.LogcatAppender
+ * import app.habitap.swipereveallayout.demo.LogcatAppender
  *
  * class MyApp : Application() {
  *     override fun onCreate() {
@@ -66,7 +66,7 @@ import java.io.IOException
  * Also note that the appender must be named "LOGCAT" in the `assets/logback.xml` configuration:
  * ```
  * <configuration>
- *     <appender name="LOGCAT" class="io.github.rexmtorres.android.swipereveallayout.demo.log.LogcatAppender">
+ *     <appender name="LOGCAT" class="app.habitap.swipereveallayout.demo.LogcatAppender">
  *         ...
  *     </appender>
  *

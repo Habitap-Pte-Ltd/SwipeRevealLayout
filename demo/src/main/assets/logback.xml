@@ -1,6 +1,6 @@
 <configuration>
     <!-- log to normal LogCat -->
-    <appender name="LOGCAT" class="io.github.rexmtorres.android.swipereveallayout.demo.log.LogcatAppender">
+    <appender name="LOGCAT" class="app.habitap.swipereveallayout.demo.log.LogcatAppender">
         <tagEncoder>
             <pattern>[SRLD] %logger{0}</pattern>
         </tagEncoder>

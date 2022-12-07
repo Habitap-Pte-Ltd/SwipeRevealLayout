@@ -1,4 +1,4 @@
-package io.github.rexmtorres.android.swipereveallayout.demo.fragment
+package app.habitap.swipereveallayout.demo.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import io.github.rexmtorres.android.swipereveallayout.demo.R
-import io.github.rexmtorres.android.swipereveallayout.demo.databinding.FragmentSwipeRevealLayoutDemoBinding
+import app.habitap.swipereveallayout.demo.R
+import app.habitap.swipereveallayout.demo.databinding.FragmentSwipeRevealLayoutDemoBinding
 
 class SwipeRevealLayoutDemoFragment : Fragment() {
     private lateinit var _binding: FragmentSwipeRevealLayoutDemoBinding

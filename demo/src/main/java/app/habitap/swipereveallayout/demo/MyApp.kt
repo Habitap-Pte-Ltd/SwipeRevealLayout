@@ -1,7 +1,7 @@
-package io.github.rexmtorres.android.swipereveallayout.demo
+package app.habitap.swipereveallayout.demo
 
 import android.app.Application
-import io.github.rexmtorres.android.swipereveallayout.demo.log.LogcatAppender
+import app.habitap.swipereveallayout.demo.log.LogcatAppender
 
 class MyApp : Application() {
     override fun onCreate() {

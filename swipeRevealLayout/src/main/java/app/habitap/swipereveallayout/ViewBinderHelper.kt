@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package io.github.rexmtorres.android.swipereveallayout
+package app.habitap.swipereveallayout
 
 import android.os.Bundle
 import androidx.core.os.bundleOf

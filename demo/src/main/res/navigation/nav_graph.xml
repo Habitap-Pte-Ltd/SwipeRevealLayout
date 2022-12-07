@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/swipeRevealLayoutDemoFragment"
-        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.SwipeRevealLayoutDemoFragment"
+        android:name="app.habitap.swipereveallayout.demo.fragment.SwipeRevealLayoutDemoFragment"
         android:label="SwipeRevealLayout Demo"
         tools:layout="@layout/fragment_swipe_reveal_layout_demo">
 
@@ -42,19 +42,19 @@
 
     <fragment
         android:id="@+id/recyclerDemoFragment"
-        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.RecyclerDemoFragment"
+        android:name="app.habitap.swipereveallayout.demo.fragment.RecyclerDemoFragment"
         android:label="RecyclerView Demo"
         tools:layout="@layout/fragment_recycler_demo" />
 
     <fragment
         android:id="@+id/gridDemoFragment"
-        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.GridDemoFragment"
+        android:name="app.habitap.swipereveallayout.demo.fragment.GridDemoFragment"
         android:label="GridView Demo"
         tools:layout="@layout/fragment_grid_demo" />
 
     <fragment
         android:id="@+id/listDemoFragment"
-        android:name="io.github.rexmtorres.android.swipereveallayout.demo.fragment.ListDemoFragment"
+        android:name="app.habitap.swipereveallayout.demo.fragment.ListDemoFragment"
         android:label="ListView Demo"
         tools:layout="@layout/fragment_list_demo" />
 

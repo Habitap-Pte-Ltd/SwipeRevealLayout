@@ -1,12 +1,12 @@
-package io.github.rexmtorres.android.swipereveallayout.demo.adapter
+package app.habitap.swipereveallayout.demo.adapter
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import io.github.rexmtorres.android.swipereveallayout.ViewBinderHelper
-import io.github.rexmtorres.android.swipereveallayout.demo.databinding.ListItemBinding
+import app.habitap.swipereveallayout.ViewBinderHelper
+import app.habitap.swipereveallayout.demo.databinding.ListItemBinding
 import mu.KotlinLogging
 
 class RecyclerAdapter(

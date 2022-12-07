@@ -1,11 +1,11 @@
-package io.github.rexmtorres.android.swipereveallayout.demo
+package app.habitap.swipereveallayout.demo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import io.github.rexmtorres.android.swipereveallayout.demo.databinding.ActivityMainBinding
+import app.habitap.swipereveallayout.demo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

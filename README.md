@@ -31,13 +31,13 @@ Drag mode same_level:
 #### Dependencies
 ```groovy
 dependencies {
-    implementation "io.github.rexmtorres.android:swipereveallayout:0.0.1"
+    implementation "app.habitap:swipereveallayout:0.0.1"
 }
 ```
 
 #### Layout file
 ```xml
-<io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout
+<app.habitap.swipereveallayout.SwipeRevealLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:mode="same_level"
@@ -53,7 +53,7 @@ dependencies {
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
             
-</io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout>
+</app.habitap.swipereveallayout.SwipeRevealLayout>
 ```
 ```app:mode``` can be ```normal``` or ```same_level```
 

@@ -1,4 +1,4 @@
-package io.github.rexmtorres.android.swipereveallayout.demo.adapter
+package app.habitap.swipereveallayout.demo.adapter
 
 import android.content.Context
 import android.os.Bundle
@@ -9,9 +9,9 @@ import android.widget.ArrayAdapter
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
-import io.github.rexmtorres.android.swipereveallayout.SwipeRevealLayout
-import io.github.rexmtorres.android.swipereveallayout.ViewBinderHelper
-import io.github.rexmtorres.android.swipereveallayout.demo.R
+import app.habitap.swipereveallayout.SwipeRevealLayout
+import app.habitap.swipereveallayout.ViewBinderHelper
+import app.habitap.swipereveallayout.demo.R
 import mu.KotlinLogging
 
 class ListAdapter(

@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package io.github.rexmtorres.android.swipereveallayout
+package app.habitap.swipereveallayout
 
 import android.content.Context
 import android.graphics.Rect
@@ -36,6 +36,7 @@ import android.view.ViewGroup
 import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.ViewCompat
 import androidx.customview.widget.ViewDragHelper
+import app.habitap.swipereveallayout.util.debugX
 import mu.KotlinLogging
 import kotlin.math.abs
 import kotlin.math.min
@@ -630,7 +631,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
 
     override fun performClick(): Boolean {
         // Nothing to do, really...
-        logger.debug { "performClick" }
+        logger.debugX { "performClick" }
         return super.performClick()
     }
 
@@ -670,11 +671,11 @@ class SwipeRevealLayout @JvmOverloads constructor(
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        logger.debug { "onLayout: changed = $changed" }
-        logger.debug { "onLayout: left = $l" }
-        logger.debug { "onLayout: top = $t" }
-        logger.debug { "onLayout: right = $r" }
-        logger.debug { "onLayout: bottom = $b" }
+        logger.debugX { "onLayout: changed = $changed" }
+        logger.debugX { "onLayout: left = $l" }
+        logger.debugX { "onLayout: top = $t" }
+        logger.debugX { "onLayout: right = $r" }
+        logger.debugX { "onLayout: bottom = $b" }
 
         isAborted = false
 
@@ -688,10 +689,10 @@ class SwipeRevealLayout @JvmOverloads constructor(
             val maxBottom =
                 (b - paddingBottom - t).coerceAtLeast(0) // (b - t).coerceAtLeast(0) // (b - paddingBottom - t).coerceAtLeast(0)
 
-            logger.debug { "onLayout: minLeft = $minLeft" }
-            logger.debug { "onLayout: maxRight = $maxRight" }
-            logger.debug { "onLayout: minTop = $minTop" }
-            logger.debug { "onLayout: maxBottom = $maxBottom" }
+            logger.debugX { "onLayout: minLeft = $minLeft" }
+            logger.debugX { "onLayout: maxRight = $maxRight" }
+            logger.debugX { "onLayout: minTop = $minTop" }
+            logger.debugX { "onLayout: maxBottom = $maxBottom" }
 
             var measuredChildHeight = child.measuredHeight
             var measuredChildWidth = child.measuredWidth
@@ -752,7 +753,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
                 }
             }
 
-            logger.debug { "onLayout: child.layout(l: $left, t: $top, r: $right, b: $bottom)" }
+            logger.debugX { "onLayout: child.layout(l: $left, t: $top, r: $right, b: $bottom)" }
             child.layout(left, top, right, bottom)
         }
 
@@ -793,7 +794,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
         val heightMode = MeasureSpec.getMode(heightMeasureSpec2)
 
         @Suppress("KotlinConstantConditions")
-        logger.debug {
+        logger.debugX {
             "onMeasure: widthMode = ${
                 when (widthMode) {
                     MeasureSpec.UNSPECIFIED -> "UNSPECIFIED ($widthMode)"
@@ -805,7 +806,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
         }
 
         @Suppress("KotlinConstantConditions")
-        logger.debug {
+        logger.debugX {
             "onMeasure: heightMode = ${
                 when (heightMode) {
                     MeasureSpec.UNSPECIFIED -> "UNSPECIFIED ($heightMode)"
@@ -820,36 +821,36 @@ class SwipeRevealLayout @JvmOverloads constructor(
         var desiredHeight = 0
 
         // first find the largest child
-        logger.debug { "onMeasure: ++++++++++++++++++++++++++++++++++++++++++" }
-        logger.debug { "onMeasure: Finding largest child..." }
+        logger.debugX { "onMeasure: ++++++++++++++++++++++++++++++++++++++++++" }
+        logger.debugX { "onMeasure: Finding largest child..." }
 
         for (i in 0 until childCount) {
             val child = getChildAt(i)
-            logger.debug { "onMeasure: child = $child" }
+            logger.debugX { "onMeasure: child = $child" }
 
             measureChild(child, widthMeasureSpec2, heightMeasureSpec2)
 
             val measuredWidth = child.measuredWidth
             val measuredHeight = child.measuredHeight
 
-            logger.debug { "onMeasure:     measuredWidth = $measuredWidth" }
-            logger.debug { "onMeasure:     measuredHeight = $measuredHeight" }
+            logger.debugX { "onMeasure:     measuredWidth = $measuredWidth" }
+            logger.debugX { "onMeasure:     measuredHeight = $measuredHeight" }
 
             desiredWidth = measuredWidth.coerceAtLeast(desiredWidth)
             desiredHeight = measuredHeight.coerceAtLeast(desiredHeight)
 
-            logger.debug { "onMeasure:     desiredWidth = $desiredWidth" }
-            logger.debug { "onMeasure:     desiredHeight = $desiredHeight" }
+            logger.debugX { "onMeasure:     desiredWidth = $desiredWidth" }
+            logger.debugX { "onMeasure:     desiredHeight = $desiredHeight" }
         }
 
-        logger.debug { "onMeasure: Largest:" }
-        logger.debug { "onMeasure:     desiredWidth = $desiredWidth" }
-        logger.debug { "onMeasure:     desiredHeight = $desiredHeight" }
-        logger.debug { "onMeasure: ------------------------------------------" }
+        logger.debugX { "onMeasure: Largest:" }
+        logger.debugX { "onMeasure:     desiredWidth = $desiredWidth" }
+        logger.debugX { "onMeasure:     desiredHeight = $desiredHeight" }
+        logger.debugX { "onMeasure: ------------------------------------------" }
 
         // create new measure spec using the largest child width
-        logger.debug { "onMeasure: ++++++++++++++++++++++++++++++++++++++++++" }
-        logger.debug { "onMeasure: Measuring children based on largest child..." }
+        logger.debugX { "onMeasure: ++++++++++++++++++++++++++++++++++++++++++" }
+        logger.debugX { "onMeasure: Measuring children based on largest child..." }
 
         widthMeasureSpec2 = MeasureSpec.makeMeasureSpec(desiredWidth, widthMode)
         heightMeasureSpec2 = MeasureSpec.makeMeasureSpec(desiredHeight, heightMode)
@@ -857,14 +858,14 @@ class SwipeRevealLayout @JvmOverloads constructor(
         val measuredWidth = MeasureSpec.getSize(widthMeasureSpec2)
         val measuredHeight = MeasureSpec.getSize(heightMeasureSpec2)
 
-        logger.debug { "onMeasure:     measuredWidth = $measuredWidth" }
-        logger.debug { "onMeasure:     measuredHeight = $measuredHeight" }
+        logger.debugX { "onMeasure:     measuredWidth = $measuredWidth" }
+        logger.debugX { "onMeasure:     measuredHeight = $measuredHeight" }
 
         for (i in 0 until childCount) {
             val child = getChildAt(i)
             val childParams = child.layoutParams
 
-            logger.debug { "onMeasure:     child = $child" }
+            logger.debugX { "onMeasure:     child = $child" }
 
             if (childParams != null) {
                 if (childParams.height == LayoutParams.MATCH_PARENT) {
@@ -881,14 +882,14 @@ class SwipeRevealLayout @JvmOverloads constructor(
             desiredWidth = child.measuredWidth.coerceAtLeast(desiredWidth)
             desiredHeight = child.measuredHeight.coerceAtLeast(desiredHeight)
 
-            logger.debug { "onMeasure:         desiredWidth = $desiredWidth" }
-            logger.debug { "onMeasure:         desiredHeight = $desiredHeight" }
+            logger.debugX { "onMeasure:         desiredWidth = $desiredWidth" }
+            logger.debugX { "onMeasure:         desiredHeight = $desiredHeight" }
         }
 
-        logger.debug { "onMeasure:     paddingLeft = $paddingStart" }
-        logger.debug { "onMeasure:     paddingRight = $paddingEnd" }
-        logger.debug { "onMeasure:     paddingTop = $paddingTop" }
-        logger.debug { "onMeasure:     paddingBottom = $paddingBottom" }
+        logger.debugX { "onMeasure:     paddingLeft = $paddingStart" }
+        logger.debugX { "onMeasure:     paddingRight = $paddingEnd" }
+        logger.debugX { "onMeasure:     paddingTop = $paddingTop" }
+        logger.debugX { "onMeasure:     paddingBottom = $paddingBottom" }
 
         // adjust desired width
         if (widthMode == MeasureSpec.EXACTLY) {
@@ -916,20 +917,20 @@ class SwipeRevealLayout @JvmOverloads constructor(
             }
         }
 
-        logger.debug { "onMeasure:     After adjustment:" }
-        logger.debug { "onMeasure:         desiredWidth = $desiredWidth" }
-        logger.debug { "onMeasure:         desiredHeight = $desiredHeight" }
+        logger.debugX { "onMeasure:     After adjustment:" }
+        logger.debugX { "onMeasure:         desiredWidth = $desiredWidth" }
+        logger.debugX { "onMeasure:         desiredHeight = $desiredHeight" }
 
         // taking accounts of padding
         desiredWidth += paddingStart + paddingEnd
         desiredHeight += paddingTop + paddingBottom
 
-        logger.debug { "onMeasure:     With padding:" }
-        logger.debug { "onMeasure:         desiredWidth = $desiredWidth" }
-        logger.debug { "onMeasure:         desiredHeight = $desiredHeight" }
+        logger.debugX { "onMeasure:     With padding:" }
+        logger.debugX { "onMeasure:         desiredWidth = $desiredWidth" }
+        logger.debugX { "onMeasure:         desiredHeight = $desiredHeight" }
 
         setMeasuredDimension(desiredWidth, desiredHeight)
-        logger.debug { "onMeasure: ------------------------------------------" }
+        logger.debugX { "onMeasure: ------------------------------------------" }
     }
 
     override fun computeScroll() {
@@ -1059,7 +1060,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
             mainView.end,
             mainView.bottom
         )
-        logger.debug { "initRects: rectMainClose = $rectMainClose" }
+        logger.debugX { "initRects: rectMainClose = $rectMainClose" }
 
         // close position of secondary view
         rectSecClose.set(
@@ -1068,7 +1069,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
             secondaryView.end,
             secondaryView.bottom
         )
-        logger.debug { "initRects: rectSecClose = $rectSecClose" }
+        logger.debugX { "initRects: rectSecClose = $rectSecClose" }
 
         // open position of the main view
         rectMainOpen.set(
@@ -1077,7 +1078,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
             mainOpenLeft + mainView.width,
             mainOpenTop + mainView.height
         )
-        logger.debug { "initRects: rectMainOpen = $rectMainOpen" }
+        logger.debugX { "initRects: rectMainOpen = $rectMainOpen" }
 
         // open position of the secondary view
         rectSecOpen.set(
@@ -1086,7 +1087,7 @@ class SwipeRevealLayout @JvmOverloads constructor(
             secOpenLeft + secondaryView.width,
             secOpenTop + secondaryView.height
         )
-        logger.debug { "initRects: rectSecOpen = $rectSecOpen" }
+        logger.debugX { "initRects: rectSecOpen = $rectSecOpen" }
     }
 
     private fun couldBecomeClick(ev: MotionEvent): Boolean =
